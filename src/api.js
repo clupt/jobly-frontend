@@ -17,8 +17,8 @@ class JoblyApi {
   static token;
 
   static async request(endpoint, data = {}, method = "get") {
-    console.log("endpoint????", endpoint);
-    console.debug("API Call:", endpoint, data, method);
+    // console.log("endpoint????", endpoint);
+    // console.debug("API Call:", endpoint, data, method);
 
     const url = `${BASE_URL}/${endpoint}`;
     const headers = { Authorization: `Bearer ${JoblyApi.token}` };
@@ -29,7 +29,7 @@ class JoblyApi {
     try {
       return (await axios({ url, method, data, params, headers })).data;
     } catch (err) {
-      console.error("API Error:", err.response);
+      // console.error("API Error:", err.response);
       let message = err.response.data.error.message;
       throw Array.isArray(message) ? message : [message];
     }
@@ -68,9 +68,9 @@ class JoblyApi {
 
   static async getJobs(title) {
     // let res = await this.request(`jobs/?title=${title}`);
-    console.log("title in api getJobs=", title);
+    // console.log("title in api getJobs=", title);
     let res = await this.request(`jobs`, { title });
-    console.log("res in api on getJobs=", res);
+    // console.log("res in api on getJobs=", res);
     return res.jobs;
   }
   /**
@@ -78,7 +78,7 @@ class JoblyApi {
      * register user and get jwt token back
     */
   static async registerUser({ username, password, firstName, lastName, email }) {
-    console.log("registerUser");
+    // console.log("registerUser");
     // let res = await this.request({endpoint:`auth/register`, data:{ username, password, firstName, lastName, email }, method: "post"});
     let res = await this.request(`auth/register`, { username, password, firstName, lastName, email },"post");
 
@@ -92,7 +92,7 @@ class JoblyApi {
    * Login user and get jwt token back
   */
   static async loginUser({ username, password }) {
-    console.log("loginUser");
+    // console.log("loginUser");
     let res = await this.request(`auth/token`, { username, password }, "post");
     return res.token;
   }
@@ -103,8 +103,8 @@ class JoblyApi {
   * where jobs is { id, title, companyHandle, companyName, state }
   */
   static async getUser( username ) {
-    console.log("inside getUser API");
-    console.log("username", username);
+    // console.log("inside getUser API");
+    // console.log("username", username);
     let res = await this.request(`users/${username}`, );
     return res.user;
   }

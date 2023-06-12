@@ -19,7 +19,7 @@ import Alert from "./Alert";
  */
 
 function ProfileForm() {
-  console.log("ProfileForm ran");
+  // console.log("ProfileForm ran");
   return (
     <div className="ProfileForm">Profile form!</div>
   );

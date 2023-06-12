@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState } from "react";
 import "./LoginForm.css";
 import Alert from "./Alert";
 
@@ -15,14 +15,14 @@ import Alert from "./Alert";
  */
 
 function LoginForm({ login, errorMessages }) {
-  console.log("LoginForm ran");
+  // console.log("LoginForm ran");
   const initialState = {
     username: "",
     password: "",
   };
 
   const [formData, setFormData] = useState(initialState);
-  console.log("formData", formData);
+  // console.log("formData", formData);
 
   /** Update form input. */
   function handleChange(evt) {

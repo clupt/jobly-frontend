@@ -15,10 +15,10 @@ import "./SearchForm.css";
  */
 
 function SearchForm({ handleSearch, currSearchTerms }) {
-  console.log("SearchForm ran");
-  console.log("currSearchTerms", currSearchTerms);
+  // console.log("SearchForm ran");
+  // console.log("currSearchTerms", currSearchTerms);
   const [formData, setFormData] = useState({ searchTerms: currSearchTerms });
-  console.log("formData", formData);
+  // console.log("formData", formData);
 
   /** Update form input. */
   function handleChange(evt) {

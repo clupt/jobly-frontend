@@ -38,7 +38,7 @@ import userContext from "./userContext";
 function RoutesList({login, signup, logout, errorMessages}) {
 
   const { username } = useContext(userContext);
-  console.log("username in navigation=", username);
+  // console.log("username in navigation=", username);
   //TODO: update classes to have component name as a class first
   const loggedInRoutes =
     <div className="Routes-loggedIn">
