@@ -29,7 +29,6 @@ import { decodeToken } from "react-jwt";
  * App ==> { Navigation, RoutesList }
  */
 function App() {
-  console.log("Inside App.");
 
   const initialState = {
     username: null,
@@ -44,24 +43,24 @@ function App() {
   const [currUserData, setCurrUserData] = useState(initialState);
   const [errorMessages, setErrorMessages] = useState(null);
 
-  console.log("App state=", "token=", token, "currUserData", currUserData);
-  console.log("error msgs in app", errorMessages);
+  // console.log("App state=", "token=", token, "currUserData", currUserData);
+  // console.log("error msgs in app", errorMessages);
 
   /** Gets user data on initial render and token change */
   useEffect(function fetchUserOnTokenChange() {
-    console.log("inside fetchUserOnTokenChange");
+    // console.log("inside fetchUserOnTokenChange");
     async function getUser() {
-      console.log("inside getUser");
+      // console.log("inside getUser");
       if (token !== null) {
         JoblyApi.token = token;
         const username = decodeToken(token).username;
-        console.log("jwt decode username=", username);
+        // console.log("jwt decode username=", username);
         try {
           const userResult = await JoblyApi.getUser(username, token);
-          console.log("userResult", userResult);
+          // console.log("userResult", userResult);
           setCurrUserData(userResult);
         } catch (error) {
-          console.log("error in getUser");
+          // console.log("error in getUser");
           setErrorMessages(error);
         }
       }
@@ -73,14 +72,14 @@ function App() {
 
   //TODO: update error message handling to empty them out somewhere
   async function login(loginData) {
-    console.log("inside login");
+    // console.log("inside login");
     const { username, password } = loginData;
     try {
       const token = await JoblyApi.loginUser({ username, password });
       setToken(token);
       localStorage.setItem("token", token);
     } catch (error) {
-      console.log("error in login", error);
+      // console.log("error in login", error);
       return error;
       // setErrorMessages(error);
     }
@@ -88,7 +87,7 @@ function App() {
 
   /** Signs up a user or sets error messages */
   async function signup(signupData) {
-    console.log("inside signup");
+    // console.log("inside signup");
     const { username, password, firstName, lastName, email } = signupData;
     try {
       const token =
@@ -97,23 +96,23 @@ function App() {
         );
       setToken(token);
       JoblyApi.token = token;
-      console.log("token above in signup", token);
+      // console.log("token above in signup", token);
       localStorage.setItem("token", token);
-      console.log("token below in signup", token);
+      // console.log("token below in signup", token);
     } catch (error) {
-      console.log("error in signup", error);
+      // console.log("error in signup", error);
       setErrorMessages(error);
     }
   }
 
   /** Logs out a user and sets token to empty string */
   function logout() {
-    console.log("inside logout");
+    // console.log("inside logout");
     setToken(null);
     localStorage.removeItem("token");
     setCurrUserData(initialState);
   }
-  console.log("token before return in app is", token);
+  // console.log("token before return in app is", token);
   return (
     <div className="App">
       <userContext.Provider value={

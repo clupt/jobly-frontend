@@ -16,21 +16,21 @@ import JoblyApi from "./api";
 */
 
 function JobList() {
-  console.log("JobList Ran");
+  // console.log("JobList Ran");
   const [jobs, setJobs] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
   const [currFilter, setCurrFilter] = useState(undefined);
   const [hasErrors, setHasErrors] = useState(false);
-  console.log("JobList state", jobs, isSearching, currFilter);
-  console.log("hasErrors in joblist=", hasErrors);
-  console.log("currFilter is=", currFilter);
+  // console.log("JobList state", jobs, isSearching, currFilter);
+  // console.log("hasErrors in joblist=", hasErrors);
+  // console.log("currFilter is=", currFilter);
 
   //on first render, displays all companies
   useEffect(function fetchJobsOnLaunch() {
     async function getJobs() {
       try {
         const jobs = await JoblyApi.getJobs(currFilter);
-        console.log("jobs after request=", jobs);
+        // console.log("jobs after request=", jobs);
         setJobs(jobs);
       } catch (error) {
         setHasErrors(true);
@@ -48,8 +48,8 @@ function JobList() {
 
   /** Update with search term and trigger rerender of company list */
   function handleJobSearch(searchTerms) {
-    console.log("handleJobSearch ran");
-    console.log("searchTerms in handleJobSearch fn", searchTerms);
+    // console.log("handleJobSearch ran");
+    // console.log("searchTerms in handleJobSearch fn", searchTerms);
     setCurrFilter(searchTerms);
   }
 

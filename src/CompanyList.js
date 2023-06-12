@@ -20,12 +20,12 @@ TODO: reduce use effect by creating piece of state hasErrors
 */
 
 function CompanyList() {
-  console.log("CompanyList Ran");
+  // console.log("CompanyList Ran");
   const [companies, setCompanies] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
   const [currFilter, setCurrFilter] = useState(undefined);
   const [hasErrors, setHasErrors] = useState(false);
-  console.log("CompanyList state", companies, isSearching, currFilter);
+  // console.log("CompanyList state", companies, isSearching, currFilter);
 
   //on first render, displays all companies
   //TODO: rename OnLaunch
@@ -50,8 +50,8 @@ function CompanyList() {
 
   /** Update with search term and trigger rerender of company list */
   function handleCompanySearch(searchTerms) {
-    console.log("handleCompanySearch ran");
-    console.log("searchTerms in handleCOmpanySearch fn", searchTerms);
+    // console.log("handleCompanySearch ran");
+    // console.log("searchTerms in handleCOmpanySearch fn", searchTerms);
     setCurrFilter(searchTerms);
   }
 

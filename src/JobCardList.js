@@ -13,8 +13,8 @@ import JobCard from "./JobCard";
  * { JobList, CompanyDetails } => JobCardList => JobCard */
 
 function JobCardList({ jobs }) {
-  console.log("JobCardList ran");
-  console.log("jobs in JCL=", jobs);
+  // console.log("JobCardList ran");
+  // console.log("jobs in JCL=", jobs);
 
   return (
     <div className="JobCardList">

@@ -20,7 +20,7 @@ import { useState, useEffect } from "react";
  */
 
 function CompanyDetail() {
-  console.log("Company Detail ran");
+  // console.log("Company Detail ran");
   const initialState = {
     handle: "",
     logoUrl: "",
@@ -32,9 +32,9 @@ function CompanyDetail() {
   const [isSearching, setIsSearching] = useState(false);
   const [companyData, setCompanyData] = useState(initialState);
   const [hasErrors, setHasErrors] = useState(false);
-  console.log("Company Detail state=", isSearching, "companyData=", companyData);
-  console.log("companyData.jobs =", companyData.jobs);
-  console.log("hasErrors=", hasErrors);
+  // console.log("Company Detail state=", isSearching, "companyData=", companyData);
+  // console.log("companyData.jobs =", companyData.jobs);
+  // console.log("hasErrors=", hasErrors);
 
   const { handle } = useParams();
 
@@ -42,10 +42,10 @@ function CompanyDetail() {
     async function getCompany() {
       try {
         const company = await JoblyApi.getCompany(handle);
-        console.log("company in fetchCompanyOnLaunch", company);
+        // console.log("company in fetchCompanyOnLaunch", company);
         setCompanyData(company);
       } catch (error) {
-        console.log("INSIDE CATCH ERROR", error);
+        // console.log("INSIDE CATCH ERROR", error);
         setHasErrors(true);
       }
       setIsSearching(false);
