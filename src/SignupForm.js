@@ -17,7 +17,6 @@ import Alert from "./Alert";
  */
 
 function SignupForm({ signup, errorMessages }) {
-  // console.log("SignupForm ran");
 
   const initialState = {
     username: "",
@@ -28,7 +27,6 @@ function SignupForm({ signup, errorMessages }) {
   };
 
   const [formData, setFormData] = useState(initialState);
-  // console.log("formData", formData);
 
   /** Update form input. */
   function handleChange(evt) {
