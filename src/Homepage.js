@@ -11,15 +11,12 @@ import "./Homepage.css"
 */
 
 function Homepage() {
-  console.log("homepage ran");
   const { username } = useContext(userContext);
-  console.log("username in navigation=", username);
 
   const loggedInHomepageContent =
     <div className="Homepage-loggedInHomepageContent">
       <p>Welcome back, {username}!</p>
     </div>;
-  //TODO: updsate classnames w component names first
   const loggedOutHomepageContent =
     <div className="Homepage-loggedOutHomepageContent">
       <Link to="/login">
