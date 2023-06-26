@@ -103,8 +103,6 @@ class JoblyApi {
   * where jobs is { id, title, companyHandle, companyName, state }
   */
   static async getUser( username ) {
-    // console.log("inside getUser API");
-    // console.log("username", username);
     let res = await this.request(`users/${username}`, );
     return res.user;
   }

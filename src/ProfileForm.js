@@ -1,6 +1,6 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./ProfileForm.css";
-import Alert from "./Alert";
+// import Alert from "./Alert";
 
 /** ProfileForm
  *
@@ -19,7 +19,6 @@ import Alert from "./Alert";
  */
 
 function ProfileForm() {
-  // console.log("ProfileForm ran");
   return (
     <div className="ProfileForm">Profile form!</div>
   );

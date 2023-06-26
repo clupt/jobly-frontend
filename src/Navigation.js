@@ -12,11 +12,8 @@ import userContext from "./userContext";
 */
 
 function Navigation({logout}) {
-  // console.log("navigation ran");
 
   const { username } = useContext(userContext);
-  // console.log("username in navigation=", username);
-
   //TODO: navigate logout then set navigate to - race condition
   const loggedInNav =
     <nav className="Navigation Navigation-loggedIn">
