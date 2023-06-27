@@ -1,6 +1,6 @@
 # Jobly
 Job Searching API with React Frontend and Express, Node, PostgreSQL Backend
-Deployed on: https://clupt-jobly.surge.sh/
+** Deployed on: https://clupt-jobly.surge.sh/
 
 ## Local Setup
 
@@ -18,5 +18,5 @@ React Component Hierarchy:
 https://www.figma.com/file/PhTn3Jarqgc2QtFks8Eim2/Jobly?type=whiteboard&node-id=0-1&t=ZcUHXxRLhmZv1r4O-0
 
 Backend repos:
-https://github.com/clupt/express-jobly
-https://github.com/clupt/jobly-backend
+** https://github.com/clupt/express-jobly
+** https://github.com/clupt/jobly-backend
