@@ -15,11 +15,11 @@ Deployed on: https://clupt-jobly.surge.sh/
 Open [http://localhost:3000] to view it in your browser.
 
 
-React Component Hierarchy:
+## React Component Hierarchy:
 
 https://www.figma.com/file/PhTn3Jarqgc2QtFks8Eim2/Jobly?type=whiteboard&node-id=0-1&t=ZcUHXxRLhmZv1r4O-0
 
-Backend repos:
+## Backend repos:
 
 https://github.com/clupt/express-jobly
 
